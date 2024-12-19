@@ -1,0 +1,77 @@
+.banner {
+    position: relative;
+    background: url("assets/gambar1.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    color: #fff;
+    z-index: 1;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+    z-index: -1;
+}
+
+.welcome-text {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.main-heading {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.btn-custom {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+    background-color: #dc3545;
+    border: none;
+    font-size: 1.2rem;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    background-color: #dc3545;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 3rem;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.crop-img {
+    object-fit: cover;
+}
+
+.client img {
+    height: auto;
+    max-height: 50px;
+}

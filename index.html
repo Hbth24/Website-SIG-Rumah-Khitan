@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website SIG Pemetaan Rumah Khitan Kota Semarang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"> Website SIG Pemetaan Rumah Khitan Kota Semarang</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse text-right" id="navbarText">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#tentang">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portofolio">Portofolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#peta">Peta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tim">Tim</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#kontak">Kontak Kami</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- Banner -->
+    <div class="container-fluid banner">
+      <div class="container text-center">
+          <div class="content-wrapper">
+              <h4 class="welcome-text">Selamat Datang di Website</h4>
+              <h3 class="display-1 main-heading">Pemetaan Rumah Khitan</h3>
+              <h3 class="display-1 main-heading">Kota Semarang</h3>
+              <a href="#tentang">
+                  <button type="button" class="btn btn-custom btn-lg">Cari Tahu Sekarang!</button>
+              </a>
+          </div>
+      </div>
+    </div>
+    <!-- Tentang -->
+    <div class="container-fluid py-5 bg-light">
+      <div class="container text">
+        <h2 class="display-4 text-center mb-4 fw-bold" id="tentang">Tentang Kami</h2>
+        <p class="text-center fs-5 mb-5 text-secondary fw-light">Solusi Digital Terpercaya untuk Menemukan Layanan Khitan Berkualitas di Kota Semarang
+        </p>
+        <div class="clearfix pt-4">
+          <img src="assets/gambar4.jpg" class="col-md-6 float-md-end mb-3 ms-md-4 rounded shadow-sm crop-img" width="300" height="300"/>
+          <p class="text-justify lh-lg fs-6">
+            Sistem Informasi Geografis (SIG) Pemetaan Rumah Khitan Kota Semarang hadir sebagai inovasi digital yang menghadirkan kemudahan bagi masyarakat dalam mencari dan mengakses layanan khitan terpercaya. Melalui pemanfaatan teknologi pemetaan modern berbasis web, kami membantu Anda menemukan layanan khitan profesional yang sesuai dengan kebutuhan. Sebagai pionir dalam penerapan teknologi pemetaan untuk layanan kesehatan, platform kami menyajikan informasi komprehensif tentang rumah khitan di seluruh Kota Semarang.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Portofolio -->
+    <div class="container-fluid pt-5 pb-5 bg-light ">
+      <div class="container text-center">
+        <h2 class="display-4 text-center mb-4 fw-bold" id="portofolio">Portofolio</h2>
+        <p class="text-center fs-5 mb-5 text-secondary fw-light">Kami hadir untuk memberikan pelayanan khitan yang nyaman, aman, dan profesional. Dengan tim medis berpengalaman dan fasilitas modern, kami siap menemani momen penting anak Anda.</p>
+        <div class="row pt-4 gx-4 gy-4">
+            <div class="col-md-4">
+                <div class="card crop-img" style="width: 18rem;">
+                    <div class="d-flex justify-content-center">
+                        <img 
+                            src="assets/gambar2.jpg" 
+                            class="card-img-top"
+                            width="200"
+                            height="200"
+                        >
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Khitan Homecare</h5>
+                        <p class="card-text">Layanan Khitan Homecare kami memudahkan khitan dilakukan di rumah dengan tim medis profesional, alat steril, dan jadwal fleksibel. Aman, nyaman, dan perawatan dijamin hingga sembuh.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card crop-img" style="width: 18rem;">
+                    <div class="d-flex justify-content-center">
+                        <img 
+                            src="assets/gambar1.jpg" 
+                            class="card-img-top"
+                            width="200"
+                            height="200"
+                        >
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Khitan Massal</h5>
+                        <p class="card-text">Layanan Khitan Massal kami memudahkan pelaksanaan khitan bersama dengan tim medis profesional, alat steril, dan proses efisien. Aman, terjangkau, dan cocok untuk kegiatan sosial.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card crop-img" style="width: 18rem;">
+                    <div class="d-flex justify-content-center">
+                        <img 
+                            src="assets/gambar3.jpeg" 
+                            class="card-img-top"
+                            width="200"
+                            height="200"
+                        >
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Khitan Premium</h5>
+                        <p class="card-text">Layanan Khitan Premium kami memberikan kenyamanan maksimal dengan tim medis profesional, fasilitas modern, dan proses minim rasa sakit. Aman, nyaman, dan cocok untuk anak Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    <!-- Peta -->
+    <div class="container-fluid pt-5 pb-5" id="peta">
+      <div class="container">
+          <h2 class="display-4 text-center mb-4 fw-bold">Peta Rumah Khitan</h2>
+          <p class="text-center fs-5 mb-5 text-secondary fw-light">Berikut adalah peta yang menampilkan lokasi rumah khitan di Kota Semarang.</p>
+          <div id="map" style="height: 500px; margin-bottom: 30px;"></div>
+          <div class="table-responsive">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <th>Nama</th>
+                          <th>Alamat</th>
+                          <th>Latitude</th>
+                          <th>Longitude</th>
+                          <th>Aksi</th>
+                      </tr>
+                  </thead>
+                  <tbody id="locationTable">
+                  </tbody>
+              </table>
+          </div>
+          <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="editModalLabel">Edit Lokasi</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="editForm">
+                    <input type="hidden" id="editId" name="id">
+                    <div class="mb-3">
+                      <label for="editName" class="form-label">Nama Lokasi</label>
+                      <input type="text" class="form-control" id="editName" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="editAddress" class="form-label">Alamat</label>
+                      <input type="text" class="form-control" id="editAddress" name="address" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="editLat" class="form-label">Latitude</label>
+                      <input type="number" class="form-control" id="editLat" name="lat" step="any" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="editLng" class="form-label">Longitude</label>
+                      <input type="number" class="form-control" id="editLng" name="lng" step="any" required>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                      <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-success" onclick="addLocation()">Tambah Lokasi</button>
+      </div>
+    </div>
+    <!-- Tim -->
+    <div class="container-fluid pt-5 pb-5 bg-light">
+      <div class="container text-center ">
+        <h2 class="display-5 text-center mb-4 fw-bold" id="tim">Tim Kami</h2>
+        <div class="row pt-4 gx-4 gy-4">
+          <div class="col-md-4 text-center tim">
+            <img src="assets/Orang1.webp" 
+            class="rounded-circle img-fluid"
+            style="width: 150px; height: 150px; object-fit: cover;"
+            >
+            <h4>Muhammad Hibatullah Arkaan</h4>
+            <p>32602100078</p>
+          </div>
+          <div class="col-md-4 text-center tim">
+            <img src="assets/Orang1.webp" 
+            class="rounded-circle img-fluid"
+            style="width: 150px; height: 150px; object-fit: cover;"
+            >
+            <h4>Indah Ayu Setia Ningrum</h4>
+            <p>32602100057</p>
+          </div>
+          <div class="col-md-4 text-center tim">
+            <img src="assets/Orang1.webp" 
+            class="rounded-circle img-fluid"
+            style="width: 150px; height: 150px; object-fit: cover;"
+            >
+            <h4>Amar Rifani</h4>
+            <p>32602100024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Client -->
+     <div class="container-fluid client pt-5 pb-5">
+      <div class="container text-center">
+        <div class="row pt-4 gx-4 gy-4">
+          <div class="col">
+            <img src="assets/gambar5.png">
+          </div>
+          <div class="col">
+            <img src="assets/gambar6.jpg">
+          </div>
+          <div class="col">
+            <img src="assets/gambar7.jpg">
+          </div>
+          <div class="col">
+            <img src="assets/gambar8.png">
+          </div>
+          <div class="col">
+            <img src="assets/gambar9.jpg">
+          </div>
+        </div>
+      </div>
+     </div>
+    <!-- Kontak -->
+     <div class="container-fluid pt-5 pb-5 kontak">
+      <div class="container">
+        <h2 class="display-4 text-center mb-4 fw-bold" id="kontak">Kontak Kami</h2>
+        <div class="row pb-3">
+          <div class="col-md-6">
+            <input class="form-control form-control-lg mb-3" type="text" placeholder="Nama"
+            >
+            <input class="form-control form-control-lg mb-3" type="text" placeholder="Email"
+            >
+            <input class="form-control form-control-lg" type="text" placeholder="No. Phone"
+            >
+          </div>
+        <div class="col-md-6">
+          <textarea class="form-control form-control-lg" rows="5"></textarea>
+        </div>
+        </div>
+        <div class="col-md-3 mx-auto text-center">
+          <button type="button" class="btn btn-danger btn-lg">Kirim Pesan</button>
+        </div>
+      </div>
+     </div>
+     <div class="container text-center pt-5 pb-5">
+      All Rights Reserved &copy; 2024 | Website SIG Pemetaan Rumah Khitan Kota Semarang
+     </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
